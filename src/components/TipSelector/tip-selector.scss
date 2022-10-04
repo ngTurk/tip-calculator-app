@@ -1,0 +1,50 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/breakpoints';
+
+.tip-selector {
+    margin-top: 46px;
+    margin-bottom: 46px;
+}
+
+.tip-selector__title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $dark-grayish-cyan;
+}
+
+.tip-selector__btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tip-selector__btn {
+    height: 46px;
+    border: none;
+    background-color: $very-dark-cyan;
+    border-radius: 5px;
+    color: $white;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 14px;
+    margin-bottom: 18px;
+    width: 100px;
+    text-align: center;
+
+    &.tip-selector__btn--selected {
+        background-color: $strong-cyan;
+    }
+
+    &.btn-custom-input {
+        background-color: $very-light-grayish-cyan;
+        color: $very-dark-cyan;
+        padding: 0;
+        text-align: center;
+        outline: 0;
+    }
+}
+
+@include breakpoint-sm {
+    .tip-selector__btn {
+        width: 38vw;
+    }
+}

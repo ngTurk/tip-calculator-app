@@ -1,0 +1,49 @@
+@import "../../assets/scss/colors";
+@import "../../assets/scss/breakpoints";
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $dark-grayish-cyan;
+  }
+
+  input {
+    height: 46px;
+    text-align: right;
+    padding: 0 20px 0 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: $very-dark-cyan;
+    font-weight: bold;
+
+    &::placeholder {
+      color: $grayish-cyan;
+    }
+
+    &.bill-amount {
+      background: url("../../assets/images/icon-dollar.svg") no-repeat scroll
+          20px 14px,
+        $very-light-grayish-cyan;
+    }
+
+    &.number-of-people {
+      background: url("../../assets/images/icon-person.svg") no-repeat scroll
+          20px 14px,
+        $very-light-grayish-cyan;
+    }
+  }
+}
+
+@include breakpoint-sm {
+  .custom-input {
+    input {
+        width: calc(100% - 60px);
+    }
+  }
+}

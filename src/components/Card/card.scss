@@ -1,0 +1,73 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/breakpoints';
+
+.card-wrapper {
+  margin-top: 86px;
+  width: 68%;
+  max-width: 862px;
+  border-radius: 25px;
+  padding: 30px;
+  background-color: $white;
+  box-shadow: -9px 10px 15px -5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-column {
+    flex: 0.5;
+
+    &:nth-child( 2 ) {
+      margin-left: 50px;
+      background: $very-dark-cyan;
+      border-radius: 25px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+.reset-btn {
+  margin-top: auto;
+  height: 46px;
+  border: none;
+  background-color: $light-cyan;
+  color: $very-dark-cyan;
+  font-weight: bold;
+}
+
+@include breakpoint-sm {
+  .content-column {
+    &:nth-child( 2 ) {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .reset-btn {
+    margin-top: 10px;
+  }
+}
+
+@include breakpoint-xl {
+  .card-wrapper {
+    width: calc(100% - 60px);
+  }
+
+  .content-column {
+    flex: 1;
+  }
+
+  .content-column {
+    &:nth-child( 2 ) {
+      margin-top: 20px;
+    }
+  }
+}
+
+@include breakpoint-md {
+  .content-column {
+    &:nth-child( 2 ) {
+      margin-left: 0;
+    }
+  }
+}
